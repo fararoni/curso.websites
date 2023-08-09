@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <section>
+            <h2>Buzón de contacto ciudadano</h2>
+            <p>Ayúdanos a mejorar enviándonos tus comentarios y sugerencias.</p>
+            <form action="https://nekdu.com/formulario.php" method="POST" name="contacto">
+                <fieldset>
+                    <legend> Información de contacto</legend>
+                    <div>
+                        <label for="idNombre">Nombre*:</label>
+                        <input name="nombre" type="text" id="idNombre" required>
+
+                        <label for="idCiudad">Ciudad*:</label>
+                        <input name="ciudad" type="text" id="idCiudad" list="idCiudades"  required>
+
+                        <datalist id="idCiudades">
+                            <option value="Ciudad de México" />
+                            <option value="Estado de México" />
+                            <option value="Morelos" />
+                            <option value="Puebla" />
+                            <option value="Queretaro" />
+
+                        </datalist>
+                    </div>
+                    <div>
+                        <label for="idCorreo">Correo:</label>
+                        <input name="correo" type="email" id="idCorreo"  required>
+
+                        <label for="idTelefono">Teléfono:</label>
+                        <input name="telefono" type="tel" id="idTtelefono"  required>
+                    </div>
+                    <div>
+                        <label for="idMensaje">Mensaje:</label><br />
+                        <textarea name="mensaje" id="idMensaje"></textarea>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend> Comunidad</legend>
+                </fieldset>
+                <fieldset>
+                    <legend>Opinión del portal</legend>
+                </fieldset>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
