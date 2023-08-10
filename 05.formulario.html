@@ -13,31 +13,27 @@
         <section>
             <h2>Buzón de contacto ciudadano</h2>
             <p>Ayúdanos a mejorar enviándonos tus comentarios y sugerencias.</p>
-            <form action="https://nekdu.com/formulario.php" method="POST" name="contacto">
+            <form action="https://nekdu.com/formulario.php" method="POST" name="contacto" enctype="multipart/form-data">
                 <fieldset>
                     <legend> Información de contacto</legend>
                     <div>
                         <label for="idNombre">Nombre*:</label>
                         <input name="nombre" type="text" id="idNombre" required>
-
                         <label for="idCiudad">Ciudad*:</label>
-                        <input name="ciudad" type="text" id="idCiudad" list="idCiudades"  required>
-
+                        <input name="ciudad" type="text" id="idCiudad" list="idCiudades" required>
                         <datalist id="idCiudades">
                             <option value="Ciudad de México" />
                             <option value="Estado de México" />
                             <option value="Morelos" />
                             <option value="Puebla" />
                             <option value="Queretaro" />
-
                         </datalist>
                     </div>
                     <div>
                         <label for="idCorreo">Correo:</label>
-                        <input name="correo" type="email" id="idCorreo"  required>
-
+                        <input name="correo" type="email" id="idCorreo" required>
                         <label for="idTelefono">Teléfono:</label>
-                        <input name="telefono" type="tel" id="idTtelefono"  required>
+                        <input name="telefono" type="tel" id="idTtelefono" required>
                     </div>
                     <div>
                         <label for="idMensaje">Mensaje:</label><br />
@@ -46,6 +42,28 @@
                 </fieldset>
                 <fieldset>
                     <legend> Comunidad</legend>
+                    <div>
+                        <label for="idFotografia">Envíanos una fotografía de tu comunidad</label>
+                        <input type="file" id="idFotografia" name="imagen" />
+
+                    </div>
+                    <div>
+                        <label for="idGenero">Elige tu género:</label>
+                        <label>Masculino</label></label><input type="radio" id="idGenero" name="genero"
+                            value="Masculino">
+                        <label>Femenino</label><input type="radio" id="idGenero" name="genero" value="Femenino" />
+                        <label>Otro</label><input type="radio" id="idGenero" name="genero" value="Otro" />
+                    </div>
+<div>
+    <label for="idIntereses">Elige tus intereses:</label>
+    <label>Deportes</label>
+        <input type="checkbox" id="idIntereses" name="intereses"  value="Deportes" />
+    <label>Música</label>
+        <input type="checkbox" id="idIntereses" name="intereses" value="Música" />
+    <label>Lectura</label>
+        <input type="checkbox" id="idIntereses" name="intereses"
+        value="Lectura" />
+</div>
                 </fieldset>
                 <fieldset>
                     <legend>Opinión del portal</legend>
