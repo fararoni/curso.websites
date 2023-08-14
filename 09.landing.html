@@ -1,97 +1,355 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UT8" />
-        <title>Mi Página</title>
-        <style>
-            ul {
-                list-style: none;
-            }
-            li {
-                border: 1px dashed cyan;
-                display: inline-block;
-                margin-right: 10px;
-                height: 70px;
-                width: 120px;
-            }
-            a {
-                display: flex;
-                border: 1px dashed red;
-                padding: 0px;
-                height: 70px;
-                justify-content: center;
-                align-items: center;
-                text-decoration: none;
-            }
-            a::hover {
-                color:black ;
-            }
-            a::active {
-                color: red;
-            }
-            header {
-                display: inline-block;
-                width: 1440px;
-                height: 70px;
-                border: 1px dashed red;
-                padding: 0px;
 
-                position: fixed;
-                left: 0px;
-                right: 0px;
-                top: 0px;
+<head>
+    <meta charset="UTF8" />
+    <title>Mi Página</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
 
-                background-color: aliceblue;
-            }
-            #logo {
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
 
-                width: 40px;
-                height: 40px;
-                padding-left: 20px;
-                padding-right: 40px;
-               
-                border: 1px dashed cyan;
-                float: left;
-            }
-            #slogan {
-                width: 240px;
-                height: 70px;
-                border: 1px dashed cyan;
-                float: left;
-            }
-            #menu {
-                margin: 0px;
-                width: 600px;
-                height: 70px;
-                border: 1px dashed cyan;
-                float: left;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <div id="logo">
-                <img src="./images/web_80_80.png">
+        header {
+            display: inline-block;
+            width: 1440px;
+            height: 70px;
+            border: 1px dashed red;
+            padding: 0px;
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            background-color: aliceblue;
+        }
+
+        .clearfix {
+            float: none;
+            clear: both;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            border: 1px dashed cyan;
+            display: inline-block;
+            margin-right: 10px;
+            height: 70px;
+            width: 120px;
+        }
+
+        a {
+            display: flex;
+            border: 1px dashed red;
+            padding: 0px;
+            height: 70px;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            background-color: black;
+
+        }
+
+        a:active {
+            color: red;
+        }
+
+        #logo {
+
+            width: 40px;
+            height: 40px;
+            padding-left: 20px;
+            padding-right: 40px;
+
+            border: 1px dashed cyan;
+            float: left;
+        }
+
+        #slogan {
+            width: 240px;
+            height: 70px;
+            border: 1px dashed cyan;
+            float: left;
+        }
+
+        #menu {
+            margin: 0px;
+            width: 600px;
+            height: 70px;
+            border: 1px dashed cyan;
+            float: right;
+        }
+
+        /*--------*/
+        main {
+            padding-top: 100px;
+            padding-left: 10px;
+            background-image: linear-gradient(to right, white, rgb(236, 233, 233));
+        }
+
+
+        .izquierda {
+            display: block;
+            width: 50%;
+            padding-top: 120px;
+
+            background-color: rgb(255, 255, 255);
+
+            margin-bottom: 40px;
+            float: left;
+        }
+
+        .derecha {
+            display: block;
+            width: 45%;
+            padding-top: 90px;
+
+            background-color: transparent;
+            margin-bottom: 10px;
+
+            justify-content: right;
+            align-items: right;
+            float: left;
+        }
+
+        /**/
+        .subtitulo {
+            display: block;
+            padding-left: 60px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #6C63FF;
+        }
+
+        .slider .izquierda h1 {
+            display: block;
+            padding-left: 60px;
+            margin-bottom: 30px;
+            width: 400px;
+
+            font-family: 'Playfair Display';
+            font-size: 50px;
+        }
+
+        .izquierda p {
+            display: block;
+            /* Redundante */
+            padding-left: 60px;
+            padding-bottom: 30px;
+            margin-bottom: 10px;
+            width: 400px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: #999;
+        }
+
+        /* ------ */
+
+        .redes {
+            display: flex;
+            /* --- */
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .redes h4 {
+            display: block;
+            /* --- */
+            float: left;
+            width: 250px;
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        /* Studio ----------------- */
+        .studio {
+            display: flex;
+            width: 100%;
+            flex-flow: row wrap;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .studio h2 {
+            display: block;
+
+            padding-top: 120px;
+            padding-right: 60px;
+            padding-bottom: 120px;
+            padding-left: 60px;
+
+            margin-bottom: 10px;
+
+            font-family: 'Lato', sans-serif !important;
+            font-size: calc(1.475rem + 2.7vw);
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .studio p {
+
+            width: 900px;
+            padding-left: 60px;
+            padding-right: 60px;
+            padding-bottom: 120px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 16px;
+            color: #1a3050;
+        }
+
+        /* Empresa ----------------- */
+        .empresa {
+            display: flex;
+            padding-top: 20px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cajas {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+
+            width: 250px;
+            height: 250px;
+            background-color: rgb(255, 255, 255);
+
+            margin-bottom: 10px;
+
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div id="logo">
+            <img src="./images/web_80_80.png">
+        </div>
+        <div id="slogan">
+            <h1>Estudio creativo</h1>
+        </div>
+        <div id="menu">
+            <nav>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Servicios</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="clearfix"></div>
+    <main>
+
+        <section class="slider">
+            <div class="izquierda">
+                <h3 class="subtitulo">Somos</h3>
+                <h1>Desarrolladores Creativos</h1>
+                <p>
+                    Innovar globalmente a través de asociaciones centradas en principios de convergencia progresiva.
+                    Combina
+                    de forma interactiva las mejores funcionalidades de su clase sin una sobrecarga de metodologías.
+
+
+                </p>
             </div>
-            <div id="slogan">
-                <h1>Estudio creativo</h1>
+            <div class="derecha">
+                <img src="./images/design_470x313.png" alt="Innovación progresiva" />
             </div>
-            <div id="menu">
-                <nav>
-                    <ul>
-                        <li><a href="">Inicio</a></li>
-                        <li><a href="">Servicios</a></li>
-                        <li><a href="">Contacto</a></li>
-                    </ul>
-                </nav>
+        </section>
+
+
+        <div class="clearfix" />
+        <section class="redes">
+            <h4>Facebook</h4>
+            <h4>Twitter</h4>
+            <h4>Whatsapp</h4>
+        </section>
+
+
+        <div class="clearfix" />
+        <section class="studio">
+            <h2>
+                Un estudio web digital que crea experiencias en línea sorprendentes y atractivas
+            </h2>
+            <p>
+                En nuestro estudio creativo de diseño web, cada línea de código es un pincelazo en el lienzo digital de
+                la innovación. Con pasión y dedicación, transformamos ideas en experiencias cautivadoras, fusionando
+                arte y tecnología en una sinfonía de colores y formas que despiertan emociones.
+            </p>
+        </section>
+
+        <div class="clearfix" />
+        <section class="empresa">
+            <div class="cajas">
+                <div class="cajaxs">
+                    <img src=" images/ceo_140x140.png" alt="[Mi nombre]">
+                </div>
+                <div class="cajaxs">
+                    <div>
+                        <h4>[Mi nombre]</h4>
+                        <span>Co-Fundador</span>
+                    </div>
+                </div>
             </div>
-        </header>
-        <main>
+            <div class="cajas">
+                <div>
+                    <img src="images/creativa_140x140.png" alt="Creatividad y diseño">
+                </div>
+                <div class="team-desc team-desc-bg">
+                    <div>
+                        <h4>[Mi nombre]</h4>
+                        <span>Co-Fundador</span>
+                    </div>
+                </div>
+            </div>
 
-        </main>
-        <footer>
+            <div class="cajas">
+                <div><img src="images/ventas_140x140.png" alt="Ventas al día"></div>
+                <div class="team-desc team-desc-bg">
+                    <div>
+                        <h4>[Mi nombre]</h4>
+                        <span>Co-Fundador</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="clearfix" />
+        <section>
+            <form action="">
+                <label>Name:</label>
+                <input type="text" name="freelance-quote-name" id="freelance-quote-name" class="form-control required"
+                    value="" placeholder="John Doe">
+            </form>
+        </section>
 
-        </footer>
-    </body>
-    
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
 </html>
