@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    width: 80%; /* El contenedor ocupa el 80% del ancho de la ventana del navegador */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.caja1 {
+    width: 50%; /* La caja ocupa el 50% del ancho de su contenedor */
+    padding: 10px;
+    background-color: #ffcccc;
+    margin-bottom: 10px;
+}
+
+.caja2 {
+    width: 30%; /* La caja ocupa el 30% del ancho de su contenedor */
+    padding: 10px;
+    background-color: #ccffcc;
+}
